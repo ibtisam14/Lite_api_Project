@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import protected_view
+from .views import home, protected_view
 
 urlpatterns = [
-    path('protected/', protected_view),
+    path('', home, name='home'),            # Frontend page
+    path('protected/', protected_view),     # API
 ]
